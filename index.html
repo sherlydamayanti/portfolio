@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Nama Kamu</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+  }
+
+  header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e3a8a, #9333ea);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 40px;
+  }
+
+  header p {
+    opacity: 0.8;
+  }
+
+  section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    border-left: 4px solid #9333ea;
+    padding-left: 10px;
+  }
+
+  .card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    background: #9333ea;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #7e22ce;
+  }
+
+  .skills span {
+    display: inline-block;
+    background: #334155;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 8px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    margin-top: 40px;
+  }
+
+  /* Animation */
+  .fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+  }
+
+  .fade.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Nama Kamu</h1>
+  <p>Android Developer | Web Developer</p>
+</header>
+
+<section class="fade">
+  <h2>About Me</h2>
+  <p>
+    Saya adalah developer yang fokus pada pengembangan aplikasi Android dan Web.
+    Berpengalaman membuat sistem CRUD dan integrasi QR Code untuk tracking data.
+  </p>
+</section>
+
+<section class="fade">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Kotlin</span>
+    <span>Laravel</span>
+    <span>CodeIgniter 4</span>
+    <span>MySQL</span>
+    <span>Android Studio</span>
+  </div>
+</section>
+
+<section class="fade">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Commissioning Report App</h3>
+    <p>Aplikasi CRUD + QR Code untuk tracking laporan.</p>
+    <p><strong>Tech:</strong> Kotlin, API, MySQL</p>
+    <a href="#" class="btn">Live Demo</a>
+    <a href="#" class="btn">Download APK</a>
+  </div>
+
+  <div class="card">
+    <h3>Web Management System</h3>
+    <p>Sistem manajemen berbasis Laravel 8.</p>
+    <p><strong>Tech:</strong> Laravel, MySQL</p>
+    <a href="#" class="btn">Live Demo</a>
+  </div>
+
+</section>
+
+<section class="fade">
+  <h2>Contact</h2>
+  <p>Email: emailkamu@gmail.com</p>
+  <p>GitHub: github.com/username</p>
+</section>
+
+<footer>
+  <p>© 2026 Nama Kamu</p>
+</footer>
+
+<script>
+  // Scroll Animation
+  const fades = document.querySelectorAll('.fade');
+
+  window.addEventListener('scroll', () => {
+    fades.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 50) {
+        el.classList.add('show');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
